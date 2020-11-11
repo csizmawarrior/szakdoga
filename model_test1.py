@@ -164,7 +164,6 @@ for i in range(tokenized_train_data['input_id'].size):
 
     train_outputs.append(output)
 
-train_outputs
 
 #getting out the searched tokens from the output
 #in the original model,
@@ -175,10 +174,11 @@ for i in range(len(dev_outputs)):
         + tokenized_dev_data["target_length"][i]
         - 1)], True)
 
-dev_first_half = pd.DataFrame({})
-for i in range(len(dev_outputs)):
-    dev_first_half.insert(i, i, dev_outputs[i][2][0][0][(tokenized_dev_data["target_idx"][i]
-        + tokenized_dev_data["target_length"][i]
+train_first_half = pd.DataFrame({})
+for i in range(len(train_outputs)):
+    train_first_half.insert(i,i,train_outputs[i][2][0][0][(
+        tokenized_train_data["target_idx"][i]
+        + tokenized_train_data["target_length"][i]
         - 1)], True)
 
 #turning them into tensors
@@ -186,3 +186,121 @@ for i in range(len(dev_outputs)):
 
 dev_x = torch.tensor(dev_first_half.values)
 train_x = torch.tensor(train_first_half.values)
+
+#labels from the dev data
+labels = tokenized_dev_data["type"].unique()
+
+
+#the expected output from the prober
+#dev data
+
+text_dev_y = tokenized_dev_data["type"]
+text_dev_y
+
+dev_y=[]
+for i in range(text_dev_y.size):
+    dev_y.append(np.where(labels == text_dev_y[i])[0][0])
+
+dev_y=torch.tensor(dev_y)
+
+#train data
+
+text_train_y = tokenized_train_data["type"]
+text_train_y
+
+train_y=[]
+for i in range(text_train_y.size):
+    train_y.append(np.where(labels == text_train_y[i])[0][0])
+
+train_y=torch.tensor(train_y)
+
+#the batch iterator class
+
+
+class BatchIterator:
+    def __init__(self, x, y, batch_size):
+        self.x = x
+        self.y = y
+        self.batch_size = batch_size
+
+    def iterate_once(self):
+        for start in range(0, len(self.x), self.batch_size):
+            end = start + self.batch_size
+            yield self.x[start:end], self.y[start:end]
+
+#the instance of the batch for the probing
+
+rain_iter = BatchIterator(train_x, train_y, 200)
+
+#the classifier/model class
+
+
+class Classifier(nn.Module):
+    def __init__(self, input_dim, output_dim, hidden_dim):
+        super().__init__()
+        self.input_layer = nn.Linear(input_dim, hidden_dim)
+        self.relu = nn.ReLU()
+        self.output_layer = nn.Linear(hidden_dim, output_dim)
+
+    def forward(self, X):
+        h = self.input_layer(X)
+        h = self.relu(h)
+        out = self.output_layer(h)
+        return out
+
+#the model itself
+
+
+model = Classifier(
+    input_dim = train_x.size(1),
+    output_dim = labels.size,
+    hidden_dim = 50
+)
+
+
+#the loss function and the optimizer
+
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters())
+
+#the training loop itself, printing out the 10 epochs
+#the amount it learns now
+
+batch_size = 50
+train_iter = BatchIterator(train_x, train_y, batch_size)
+dev_iter = BatchIterator(dev_x, dev_y, batch_size)
+
+all_train_loss = []
+all_dev_loss = []
+all_train_acc = []
+all_dev_acc =[]
+
+n_epochs = 10
+for epoch in range(n_epochs):
+    #training loop
+    for bi, (batch_x, batch_y) in enumerate(train_iter.iterate_once()):
+        
+
+        y_out = model(batch_x)
+        
+        loss = criterion(y_out, batch_y)
+        optimizer.zero_grad()
+        loss.backward()    
+        optimizer.step()
+    
+    train_out = model(train_x)
+    train_loss = criterion(train_out, train_y)
+    all_train_loss.append(train_loss.item())
+    train_pred = train_out.max(axis=1)[1]
+    train_acc = torch.eq(train_pred, train_y).sum().float() / len(train_x)
+    all_train_acc.append(train_acc)
+    
+    dev_out = model(dev_x)
+    dev_loss = criterion(dev_out, dev_y)
+    all_dev_loss.append(dev_loss.item())
+    dev_pred = dev_out.max(axis=1)[1]
+    dev_acc = torch.eq(dev_pred, dev_y).sum().float() / len(dev_x)
+    all_dev_acc.append(dev_acc)
+    
+    print(f"Epoch: {epoch}\n train_accuracy: {train_acc} train loss: {train_loss}")
+    print(f"  dev accuracy: {dev_acc}  dev loss: {dev_loss}")
