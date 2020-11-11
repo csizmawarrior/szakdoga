@@ -86,3 +86,103 @@ def text_tokenizing(text_dataframe):
     })
     return tokenized_text
 
+#data reading in the original model
+#train data
+train_data = pd.read_csv(
+    "train.tsv",
+    sep='\t',
+    names=['sentence',
+           'word',
+           'target_idx',
+           'type'
+          ],
+    quoting=3
+)
+
+train_sentences = train_data.sentence.str.split(" ").to_frame()
+
+train_data["sentence"]=train_sentences
+train_data
+
+#dev data
+
+dev_data = pd.read_csv(
+    "dev.tsv",
+    sep='\t',
+    names=['sentence',
+           'word',
+           'target_idx',
+           'type'
+          ]
+)
+dev_sentences = dev_data.sentence.str.split(" ").to_frame()
+dev_data["sentence"] = dev_sentences
+dev_data
+
+#Letting data through the model
+#and tokenizer, in the original model
+
+#dev data
+
+tokenized_dev_data=text_tokenizing(dev_data)
+dev_outputs=[]
+
+#every sentence gets turned into tensor
+#so we can let it through the mode, then save the output
+for i in range(tokenized_dev_data['input_id'].size):
+
+    sentence=[tokenized_dev_data["input_id"][i],
+              tokenized_dev_data["attention_mask"][i]]
+    tensor_sentence=torch.LongTensor(sentence)
+
+    with torch.no_grad():
+        output=model(
+            tensor_sentence,
+            output_hidden_states=True
+        )
+
+    dev_outputs.append(output)
+
+#train data
+
+tokenized_train_data=text_tokenizing(train_data)
+train_outputs=[]
+
+for i in range(tokenized_train_data['input_id'].size):
+
+    sentence=[tokenized_train_data["input_id"][i],
+              tokenized_train_data["attention_mask"][i]]
+
+    tensor_sentence=torch.LongTensor(sentence)
+    print(tensor_sentence.size())
+
+    with torch.no_grad():
+        output=model(
+            tensor_sentence,
+            output_hidden_states=True,
+        )
+
+    train_outputs.append(output)
+
+train_outputs
+
+#getting out the searched tokens from the output
+#in the original model,
+
+dev_first_half = pd.DataFrame({})
+for i in range(len(dev_outputs)):
+    dev_first_half.insert(i, i, dev_outputs[i][2][0][0][(tokenized_dev_data["target_idx"][i]
+        + tokenized_dev_data["target_length"][i]
+        - 1)], True)
+
+dev_first_half = pd.DataFrame({})
+for i in range(len(dev_outputs)):
+    dev_first_half.insert(i, i, dev_outputs[i][2][0][0][(tokenized_dev_data["target_idx"][i]
+        + tokenized_dev_data["target_length"][i]
+        - 1)], True)
+
+#turning them into tensors
+#for the neural network used in probing
+
+dev_x = torch.tensor(dev_first_half.values)
+train_x = torch.tensor(train_first_half.values)
