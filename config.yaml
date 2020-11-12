@@ -1,6 +1,3 @@
-node:
-  loompa: 10
-  zippity: ${node.loompa}
-  do: "oompa ${node.loompa}"
-  waldo: ???
-
+config:
+  model: BERT-multilingual
+  data: number_noun
