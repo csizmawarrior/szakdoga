@@ -23,10 +23,10 @@ def model_configurable(cfg: DictConfig) -> None:
            'target_idx',
            'type'
           ],
-   	 quoting=3
+    	 quoting=3
         )
-        train_sentences = train_data.sentence.str.split(" ").to_frame()
-        train_data["sentence"]=train_sentences
+    train_sentences = train_data.sentence.str.split(" ").to_frame()
+    train_data["sentence"]=train_sentences
 
 #dev data
     dev_data = pd.read_csv(
