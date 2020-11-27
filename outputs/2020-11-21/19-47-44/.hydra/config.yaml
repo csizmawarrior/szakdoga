@@ -1,0 +1,11 @@
+conf:
+  model: BERT_multilingual
+  data: number_noun
+data:
+  path: conf/data/number_adj
+  train: train.tsv
+  dev: dev.tsv
+  test: test.tsv
+model:
+  tokenizer_name: bert-base-multilingual-cased
+  model_name: bert-base-multilingual-cased

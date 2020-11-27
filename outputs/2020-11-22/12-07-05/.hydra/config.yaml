@@ -1,0 +1,9 @@
+data:
+  path: ~/szakdoga/conf/data/number_noun
+  train: train.tsv
+  dev: dev.tsv
+  test: test.tsv
+model:
+  tokenizer_name: bert-base-multilingual-cased
+  model_name: bert-base-multilingual-cased
+HYDRA_FULL_ERROR: 1

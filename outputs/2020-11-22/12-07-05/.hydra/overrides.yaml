@@ -1,0 +1,3 @@
+- +data=number_noun
+- +model=BERT_multilingual
+- +HYDRA_FULL_ERROR=1

@@ -1,0 +1,3 @@
+# @package _group_
+  tokenizer_name: "SZTAKI-HLT/hubert-base-cc"
+  model_name: "SZTAKI-HLT/hubert-base-cc"

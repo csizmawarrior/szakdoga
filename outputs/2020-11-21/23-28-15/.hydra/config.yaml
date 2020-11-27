@@ -1,0 +1,5 @@
+data:
+  path: conf/data/number_noun
+  train: train.tsv
+  dev: dev.tsv
+  test: test.tsv
