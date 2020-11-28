@@ -1,6 +1,0 @@
-conf:
-  model: BERT_multilingual
-  data: number_noun
-model:
-  tokenizer_name: bert-base-multilingual-cased
-  model_name: bert-base-multilingual-cased

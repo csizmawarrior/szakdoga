@@ -2,3 +2,5 @@
 *.py.save
 *.py.swp
 *outputs
+*.save
+*.xlsx

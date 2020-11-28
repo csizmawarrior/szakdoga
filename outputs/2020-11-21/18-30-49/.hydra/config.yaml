@@ -1,3 +1,0 @@
-conf:
-  model: BERT_multilingual
-  data: number_noun
