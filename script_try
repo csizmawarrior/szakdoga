@@ -1,0 +1,42 @@
+#!/bin/bash
+
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=5 > ./results/hubert/layer_five/$i
+done
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=6 > ./results/hubert/layer_six/$i
+done
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=7 > ./results/hubert/layer_seven/$i
+done
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=8 > ./results/hubert/layer_eight/$i
+done
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=9 > ./results/hubert/layer_nine/$i
+done
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=10 > ./results/hubert/layer_ten/$i
+done
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=11 > ./results/hubert/layer_eleven/$i
+done
+
+for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
+do
+    python3 model_configurable.py +data=$i +model=HUBert +layer=12 > ./results/hubert/layer_twelve/$i
+done

@@ -1,0 +1,33 @@
+~/szakdoga/conf/data/case_noun
+tensor(0.0509)
+Epoch: 0
+ train_accuracy: 0.9732142686843872 train loss: 0.6565843820571899
+  dev accuracy: 0.9814814925193787  dev loss: 0.6851711869239807
+Epoch: 1
+ train_accuracy: 0.9871031641960144 train loss: 0.15629827976226807
+  dev accuracy: 0.9861111044883728  dev loss: 0.18694020807743073
+Epoch: 2
+ train_accuracy: 0.9895833134651184 train loss: 0.07943812757730484
+  dev accuracy: 0.9861111044883728  dev loss: 0.1171298548579216
+Epoch: 3
+ train_accuracy: 0.992559552192688 train loss: 0.04965284466743469
+  dev accuracy: 0.9814814925193787  dev loss: 0.09923454374074936
+Epoch: 4
+ train_accuracy: 0.997519850730896 train loss: 0.03334454819560051
+  dev accuracy: 0.9768518805503845  dev loss: 0.09453517943620682
+Epoch: 5
+ train_accuracy: 0.9985119104385376 train loss: 0.023531634360551834
+  dev accuracy: 0.9768518805503845  dev loss: 0.09477540105581284
+Epoch: 6
+ train_accuracy: 0.9990079402923584 train loss: 0.01742399111390114
+  dev accuracy: 0.9768518805503845  dev loss: 0.09590554237365723
+Epoch: 7
+ train_accuracy: 1.0 train loss: 0.013403032906353474
+  dev accuracy: 0.9768518805503845  dev loss: 0.09676781296730042
+Epoch: 8
+ train_accuracy: 1.0 train loss: 0.010591503232717514
+  dev accuracy: 0.9768518805503845  dev loss: 0.09756430238485336
+Epoch: 9
+ train_accuracy: 1.0 train loss: 0.008473987691104412
+  dev accuracy: 0.9768518805503845  dev loss: 0.09775356203317642
+Test set accuracy:  tensor(0.9769)

@@ -1,0 +1,21 @@
+~/szakdoga/conf/data/degree_adj
+tensor(0.3050)
+Epoch: 0
+ train_accuracy: 0.7111444473266602 train loss: 0.516883909702301
+  dev accuracy: 0.75  dev loss: 0.5105574131011963
+Epoch: 1
+ train_accuracy: 0.7376312017440796 train loss: 0.4837878942489624
+  dev accuracy: 0.7099999785423279  dev loss: 0.5155323147773743
+Epoch: 2
+ train_accuracy: 0.7386307120323181 train loss: 0.46742838621139526
+  dev accuracy: 0.7049999833106995  dev loss: 0.521947979927063
+Epoch: 3
+ train_accuracy: 0.7546226978302002 train loss: 0.45486512780189514
+  dev accuracy: 0.7049999833106995  dev loss: 0.527626633644104
+Epoch: 4
+ train_accuracy: 0.7556222081184387 train loss: 0.4468294382095337
+  dev accuracy: 0.6850000023841858  dev loss: 0.5404892563819885
+Epoch: 5
+ train_accuracy: 0.766616702079773 train loss: 0.4384787678718567
+  dev accuracy: 0.7099999785423279  dev loss: 0.5455450415611267
+Test set accuracy:  tensor(0.6866)

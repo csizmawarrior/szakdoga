@@ -1,0 +1,27 @@
+~/szakdoga/conf/data/person[psor]_noun
+tensor(0.4527)
+Epoch: 0
+ train_accuracy: 0.9800099730491638 train loss: 0.09625908732414246
+  dev accuracy: 0.9751243591308594  dev loss: 0.1489846110343933
+Epoch: 1
+ train_accuracy: 0.9895052313804626 train loss: 0.05655812472105026
+  dev accuracy: 0.9601989984512329  dev loss: 0.12818694114685059
+Epoch: 2
+ train_accuracy: 0.9945027232170105 train loss: 0.03593077138066292
+  dev accuracy: 0.96517413854599  dev loss: 0.12070264667272568
+Epoch: 3
+ train_accuracy: 0.9985007643699646 train loss: 0.0245544221252203
+  dev accuracy: 0.9601989984512329  dev loss: 0.12252658605575562
+Epoch: 4
+ train_accuracy: 0.9990004897117615 train loss: 0.017315510660409927
+  dev accuracy: 0.9552238583564758  dev loss: 0.1264360398054123
+Epoch: 5
+ train_accuracy: 0.9995002746582031 train loss: 0.012157835066318512
+  dev accuracy: 0.9601989984512329  dev loss: 0.12856826186180115
+Epoch: 6
+ train_accuracy: 1.0 train loss: 0.008770731277763844
+  dev accuracy: 0.9552238583564758  dev loss: 0.1313796192407608
+Epoch: 7
+ train_accuracy: 1.0 train loss: 0.00655395770445466
+  dev accuracy: 0.9502487778663635  dev loss: 0.1331315040588379
+Test set accuracy:  tensor(0.9403)

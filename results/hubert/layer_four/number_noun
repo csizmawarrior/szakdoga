@@ -1,0 +1,24 @@
+~/szakdoga/conf/data/number_noun
+tensor(0.5100)
+Epoch: 0
+ train_accuracy: 0.987500011920929 train loss: 0.058051738888025284
+  dev accuracy: 0.9750000238418579  dev loss: 0.07113602757453918
+Epoch: 1
+ train_accuracy: 0.9929999709129333 train loss: 0.030848419293761253
+  dev accuracy: 0.9800000190734863  dev loss: 0.0656047984957695
+Epoch: 2
+ train_accuracy: 0.9980000257492065 train loss: 0.01804458722472191
+  dev accuracy: 0.9700000286102295  dev loss: 0.08576659113168716
+Epoch: 3
+ train_accuracy: 0.9990000128746033 train loss: 0.011691183783113956
+  dev accuracy: 0.9700000286102295  dev loss: 0.09791579097509384
+Epoch: 4
+ train_accuracy: 0.9994999766349792 train loss: 0.008309518918395042
+  dev accuracy: 0.9700000286102295  dev loss: 0.11713916063308716
+Epoch: 5
+ train_accuracy: 1.0 train loss: 0.00588690210133791
+  dev accuracy: 0.9649999737739563  dev loss: 0.13149034976959229
+Epoch: 6
+ train_accuracy: 1.0 train loss: 0.004239488858729601
+  dev accuracy: 0.9649999737739563  dev loss: 0.14177292585372925
+Test set accuracy:  tensor(0.9700)

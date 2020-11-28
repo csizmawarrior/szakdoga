@@ -99,8 +99,7 @@ class BatchIterator_model:
 
 @hydra.main(config_path="conf")
 def model_configurable(cfg: DictConfig) -> None:
-    print(cfg.data.train)
-    print(cfg.data.test)
+    print(cfg.data.path)
     tokenizer = AutoTokenizer.from_pretrained(cfg.model.tokenizer_name)
     model = AutoModel.from_pretrained(cfg.model.model_name)
 
@@ -156,7 +155,7 @@ def model_configurable(cfg: DictConfig) -> None:
             train_outputs.insert(
                len(train_outputs.columns),
                len(train_outputs.columns),
-               output[2][0][i][target_index],
+               output.hidden_states[cfg.layer.layer_number][i][target_index],
                True)
 
     train_x=torch.tensor(train_outputs.values)
@@ -213,7 +212,7 @@ def model_configurable(cfg: DictConfig) -> None:
             dev_outputs.insert(
                 len(dev_outputs.columns),
                 len(dev_outputs.columns)-1,
-                output[2][0][i][target_index],
+                output.hidden_states[cfg.layer.layer_number][i][target_index],
                 True
     )
 
@@ -267,7 +266,7 @@ def model_configurable(cfg: DictConfig) -> None:
             return out
 
 #The explicit model
-    model = Classifier(
+    model_classifier = Classifier(
         input_dim = train_x.size(1),
         output_dim = labels.size,
         hidden_dim = 50
@@ -276,10 +275,10 @@ def model_configurable(cfg: DictConfig) -> None:
 
 #criterion and optimizer
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters())
+    optimizer = optim.Adam(model_classifier.parameters())
 
 #First accuracy
-    test_pred = model(dev_x).max(axis=1)[1]
+    test_pred = model_classifier(dev_x).max(axis=1)[1]
     test_acc = torch.eq(test_pred, dev_y).sum().float() / len(dev_x)
     print(test_acc)
 
@@ -295,36 +294,115 @@ def model_configurable(cfg: DictConfig) -> None:
     all_train_acc = []
     all_dev_acc =[]
 
-    n_epochs = 10
+    patiance=4
+    previous_dev_loss=99
+    n_epochs = 50
     for epoch in range(n_epochs):
         for bi, (batch_x, batch_y) in enumerate(train_iter.iterate_once()):
-        
 
-            y_out = model(batch_x)
-        
+            y_out = model_classifier(batch_x)
+
             loss = criterion(y_out, batch_y)
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-    
-        train_out = model(train_x)
+
+        train_out = model_classifier(train_x)
         train_loss = criterion(train_out, train_y)
         all_train_loss.append(train_loss.item())
         train_pred = train_out.max(axis=1)[1]
         train_acc = torch.eq(train_pred, train_y).sum().float() / len(train_x)
         all_train_acc.append(train_acc)
 
-        dev_out = model(dev_x)
+        dev_out = model_classifier(dev_x)
         dev_loss = criterion(dev_out, dev_y)
         all_dev_loss.append(dev_loss.item())
         dev_pred = dev_out.max(axis=1)[1]
         dev_acc = torch.eq(dev_pred, dev_y).sum().float() / len(dev_x)
         all_dev_acc.append(dev_acc)
-    
+
         print(f"Epoch: {epoch}\n train_accuracy: {train_acc} train loss: {train_loss}")
         print(f"  dev accuracy: {dev_acc}  dev loss: {dev_loss}")
 
+        if(dev_loss >= previous_dev_loss):
+            patiance= patiance-1
+        else:
+            patiance=5
+        previous_dev_loss=dev_loss
+        if(patiance <=0 ):
+            break
 
+
+#testing at the end
+    test_data = pd.read_csv(
+        cfg.data.path+"/"+cfg.data.test,
+        sep='\t',
+        names=['sentence',
+               'word',
+               'target_idx',
+               'type'
+              ],
+        quoting=3,
+    )
+    test_sentences = test_data.sentence.str.split(" ").to_frame()
+    test_data["sentence"] = test_sentences
+
+
+    tokenized_test_data=text_tokenizing(test_data, tokenizer)
+
+    test_batch_size = math.ceil(tokenized_test_data["input_id"].size/5)
+    test_outputs=pd.DataFrame({})
+
+#every sentence gets turned into tensor
+#so we can let it through the mode, then save the output
+    model_test_iterator = BatchIterator_model(
+                            torch.tensor(tokenized_test_data["input_id"]),
+                            torch.tensor(tokenized_test_data["attention_mask"]),
+                            torch.tensor(tokenized_test_data["target_idx"]),
+                            torch.tensor(tokenized_test_data["target_length"]),
+                            test_batch_size
+                            )
+
+
+    for batch_id, batch_ma, batch_ti, batch_tl in model_test_iterator.iterate_once():
+
+        batch_id_tensor=torch.LongTensor(batch_id)
+        batch_ma_tensor=torch.LongTensor(batch_ma)
+
+        with torch.no_grad():
+            output=model(
+                input_ids=batch_id_tensor,
+                attention_mask=batch_ma_tensor,
+                output_hidden_states=True,
+                return_dict=True
+            )
+
+        for i in range(len(batch_id_tensor)):
+
+            target_index = (batch_ti[i] + batch_tl[i] - 1)
+
+            test_outputs.insert(
+                len(test_outputs.columns),
+                len(test_outputs.columns)-1,
+                output.hidden_states[cfg.layer.layer_number][i][target_index],
+                True
+    )
+
+    test_x = torch.tensor(test_outputs.values)
+    test_x = torch.transpose(test_x, 0,1)
+#preparing expected outputs (y values)
+
+    text_test_y = tokenized_test_data["type"]
+
+    test_y=[]
+    for i in range(text_test_y.size):
+        test_y.append(np.where(labels == text_test_y[i])[0][0])
+
+    test_y=torch.tensor(test_y)
+
+    test_pred = model_classifier(test_x).max(axis=1)[1]
+    test_acc = torch.eq(test_pred, test_y).sum().float() / len(test_x)
+    print("Test set accuracy: ", test_acc)
 
 #def functions that are needed
 

@@ -1,0 +1,45 @@
+~/szakdoga/conf/data/number[psor]_noun
+tensor(0.5050)
+Epoch: 0
+ train_accuracy: 0.9900000095367432 train loss: 0.03551142290234566
+  dev accuracy: 0.9900000095367432  dev loss: 0.048813194036483765
+Epoch: 1
+ train_accuracy: 0.9950000047683716 train loss: 0.01818951591849327
+  dev accuracy: 0.9950000047683716  dev loss: 0.034899789839982986
+Epoch: 2
+ train_accuracy: 0.9975000023841858 train loss: 0.011424083262681961
+  dev accuracy: 0.9950000047683716  dev loss: 0.02856939285993576
+Epoch: 3
+ train_accuracy: 0.9994999766349792 train loss: 0.007738872431218624
+  dev accuracy: 0.9900000095367432  dev loss: 0.0274205319583416
+Epoch: 4
+ train_accuracy: 1.0 train loss: 0.005075037479400635
+  dev accuracy: 0.9900000095367432  dev loss: 0.025706693530082703
+Epoch: 5
+ train_accuracy: 1.0 train loss: 0.0034356589894741774
+  dev accuracy: 0.9900000095367432  dev loss: 0.025372155010700226
+Epoch: 6
+ train_accuracy: 1.0 train loss: 0.002247394295409322
+  dev accuracy: 0.9950000047683716  dev loss: 0.022864224389195442
+Epoch: 7
+ train_accuracy: 1.0 train loss: 0.001618718495592475
+  dev accuracy: 0.9950000047683716  dev loss: 0.022049937397241592
+Epoch: 8
+ train_accuracy: 1.0 train loss: 0.0013277168618515134
+  dev accuracy: 0.9900000095367432  dev loss: 0.02155357040464878
+Epoch: 9
+ train_accuracy: 1.0 train loss: 0.001356776338070631
+  dev accuracy: 0.9900000095367432  dev loss: 0.023151613771915436
+Epoch: 10
+ train_accuracy: 1.0 train loss: 0.0016890508122742176
+  dev accuracy: 0.9900000095367432  dev loss: 0.027423014864325523
+Epoch: 11
+ train_accuracy: 0.9990000128746033 train loss: 0.002856359351426363
+  dev accuracy: 0.9850000143051147  dev loss: 0.0354880653321743
+Epoch: 12
+ train_accuracy: 0.9975000023841858 train loss: 0.010819262824952602
+  dev accuracy: 0.9750000238418579  dev loss: 0.05982789397239685
+Epoch: 13
+ train_accuracy: 0.9990000128746033 train loss: 0.003442628076300025
+  dev accuracy: 0.9800000190734863  dev loss: 0.06539066135883331
+Test set accuracy:  tensor(0.9600)
