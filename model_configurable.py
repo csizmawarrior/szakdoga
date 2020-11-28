@@ -278,9 +278,9 @@ def model_configurable(cfg: DictConfig) -> None:
     optimizer = optim.Adam(model_classifier.parameters())
 
 #First accuracy
-    test_pred = model_classifier(dev_x).max(axis=1)[1]
-    test_acc = torch.eq(test_pred, dev_y).sum().float() / len(dev_x)
-    print(test_acc)
+    dev_pred = model_classifier(dev_x).max(axis=1)[1]
+    dev_acc = torch.eq(dev_pred, dev_y).sum().float() / len(dev_x)
+    print(dev_acc)
 
 
 #training loop
