@@ -1,0 +1,3 @@
+# @package _group_                       
+  tokenizer_name: "xlm-roberta-base"
+  model_name: "xlm-roberta-base"

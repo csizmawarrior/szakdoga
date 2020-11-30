@@ -1,0 +1,24 @@
+~/szakdoga/conf/data/verbform_verb
+tensor(0.4100)
+Epoch: 0
+ train_accuracy: 0.9194999933242798 train loss: 0.1707145720720291
+  dev accuracy: 0.9150000214576721  dev loss: 0.20123931765556335
+Epoch: 1
+ train_accuracy: 0.9290000200271606 train loss: 0.14287778735160828
+  dev accuracy: 0.9350000023841858  dev loss: 0.1884375363588333
+Epoch: 2
+ train_accuracy: 0.9300000071525574 train loss: 0.13475120067596436
+  dev accuracy: 0.9350000023841858  dev loss: 0.19033671915531158
+Epoch: 3
+ train_accuracy: 0.9309999942779541 train loss: 0.13012133538722992
+  dev accuracy: 0.925000011920929  dev loss: 0.19291743636131287
+Epoch: 4
+ train_accuracy: 0.9315000176429749 train loss: 0.12639406323432922
+  dev accuracy: 0.925000011920929  dev loss: 0.19695383310317993
+Epoch: 5
+ train_accuracy: 0.9325000047683716 train loss: 0.12344023585319519
+  dev accuracy: 0.925000011920929  dev loss: 0.1993979662656784
+Epoch: 6
+ train_accuracy: 0.934499979019165 train loss: 0.12153119593858719
+  dev accuracy: 0.925000011920929  dev loss: 0.20060552656650543
+Test set accuracy:  tensor(0.9000)

@@ -1,0 +1,84 @@
+~/szakdoga/conf/data/verbform_verb
+tensor(0.5000)
+Epoch: 0
+ train_accuracy: 0.9915000200271606 train loss: 0.026920069009065628
+  dev accuracy: 0.9950000047683716  dev loss: 0.024732425808906555
+Epoch: 1
+ train_accuracy: 0.9959999918937683 train loss: 0.016134772449731827
+  dev accuracy: 0.9850000143051147  dev loss: 0.024085357785224915
+Epoch: 2
+ train_accuracy: 0.9975000023841858 train loss: 0.010846839286386967
+  dev accuracy: 0.9850000143051147  dev loss: 0.02421373687684536
+Epoch: 3
+ train_accuracy: 0.9990000128746033 train loss: 0.007679475471377373
+  dev accuracy: 0.9850000143051147  dev loss: 0.023367781192064285
+Epoch: 4
+ train_accuracy: 0.9990000128746033 train loss: 0.005567724816501141
+  dev accuracy: 0.9900000095367432  dev loss: 0.021063942462205887
+Epoch: 5
+ train_accuracy: 0.9990000128746033 train loss: 0.0041815731674432755
+  dev accuracy: 0.9950000047683716  dev loss: 0.01901906169950962
+Epoch: 6
+ train_accuracy: 1.0 train loss: 0.00315850879997015
+  dev accuracy: 0.9950000047683716  dev loss: 0.016780046746134758
+Epoch: 7
+ train_accuracy: 1.0 train loss: 0.002342220628634095
+  dev accuracy: 0.9950000047683716  dev loss: 0.013850660063326359
+Epoch: 8
+ train_accuracy: 1.0 train loss: 0.0018407362513244152
+  dev accuracy: 0.9950000047683716  dev loss: 0.011865930631756783
+Epoch: 9
+ train_accuracy: 1.0 train loss: 0.0016119411448016763
+  dev accuracy: 0.9950000047683716  dev loss: 0.009892528876662254
+Epoch: 10
+ train_accuracy: 1.0 train loss: 0.0015826306771486998
+  dev accuracy: 0.9950000047683716  dev loss: 0.008669307455420494
+Epoch: 11
+ train_accuracy: 1.0 train loss: 0.0015674844617024064
+  dev accuracy: 0.9950000047683716  dev loss: 0.008003588765859604
+Epoch: 12
+ train_accuracy: 1.0 train loss: 0.0014801808865740895
+  dev accuracy: 0.9950000047683716  dev loss: 0.007636647205799818
+Epoch: 13
+ train_accuracy: 1.0 train loss: 0.0011178947752341628
+  dev accuracy: 0.9950000047683716  dev loss: 0.007683475036174059
+Epoch: 14
+ train_accuracy: 1.0 train loss: 0.0006823295261710882
+  dev accuracy: 0.9900000095367432  dev loss: 0.010180214419960976
+Epoch: 15
+ train_accuracy: 1.0 train loss: 0.0008182758465409279
+  dev accuracy: 0.9950000047683716  dev loss: 0.01614176668226719
+Epoch: 16
+ train_accuracy: 0.9994999766349792 train loss: 0.002223795745521784
+  dev accuracy: 0.9850000143051147  dev loss: 0.02994009293615818
+Epoch: 17
+ train_accuracy: 1.0 train loss: 0.0005832061870023608
+  dev accuracy: 0.9950000047683716  dev loss: 0.01292630285024643
+Epoch: 18
+ train_accuracy: 1.0 train loss: 0.0004353502008598298
+  dev accuracy: 0.9950000047683716  dev loss: 0.007022347301244736
+Epoch: 19
+ train_accuracy: 1.0 train loss: 0.00047644562437199056
+  dev accuracy: 0.9950000047683716  dev loss: 0.007623329292982817
+Epoch: 20
+ train_accuracy: 1.0 train loss: 0.00024846516316756606
+  dev accuracy: 0.9900000095367432  dev loss: 0.013518106192350388
+Epoch: 21
+ train_accuracy: 1.0 train loss: 0.00021124762133695185
+  dev accuracy: 0.9900000095367432  dev loss: 0.01099944207817316
+Epoch: 22
+ train_accuracy: 1.0 train loss: 0.00019272581266704947
+  dev accuracy: 0.9900000095367432  dev loss: 0.011519155465066433
+Epoch: 23
+ train_accuracy: 1.0 train loss: 0.00017797395412344486
+  dev accuracy: 0.9900000095367432  dev loss: 0.011694028042256832
+Epoch: 24
+ train_accuracy: 1.0 train loss: 0.00016543503443244845
+  dev accuracy: 0.9900000095367432  dev loss: 0.011858999729156494
+Epoch: 25
+ train_accuracy: 1.0 train loss: 0.00015439528215210885
+  dev accuracy: 0.9900000095367432  dev loss: 0.011965133249759674
+Epoch: 26
+ train_accuracy: 1.0 train loss: 0.00014454824849963188
+  dev accuracy: 0.9900000095367432  dev loss: 0.01207934133708477
+Test set accuracy:  tensor(0.9950)
