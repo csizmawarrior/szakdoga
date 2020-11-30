@@ -1,0 +1,5 @@
+# @package _group_
+path: "~/szakdoga/conf/data/person_verb"
+train: "train.tsv"
+dev: "dev.tsv"
+test: "test.tsv"

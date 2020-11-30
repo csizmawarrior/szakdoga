@@ -1,3 +1,6 @@
 *.ipynb_checkpoints
 *.py.save
 *.py.swp
+*outputs
+*.save
+*.xlsx

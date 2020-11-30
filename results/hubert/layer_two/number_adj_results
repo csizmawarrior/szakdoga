@@ -1,0 +1,45 @@
+~/szakdoga/conf/data/number_adj
+tensor(0.4700)
+Epoch: 0
+ train_accuracy: 0.9934999942779541 train loss: 0.02533138543367386
+  dev accuracy: 0.9750000238418579  dev loss: 0.04517999291419983
+Epoch: 1
+ train_accuracy: 0.9990000128746033 train loss: 0.009492470882833004
+  dev accuracy: 0.9800000190734863  dev loss: 0.044849492609500885
+Epoch: 2
+ train_accuracy: 0.9994999766349792 train loss: 0.005941337440162897
+  dev accuracy: 0.9800000190734863  dev loss: 0.03970559313893318
+Epoch: 3
+ train_accuracy: 0.9994999766349792 train loss: 0.004728346131742001
+  dev accuracy: 0.9800000190734863  dev loss: 0.03678447753190994
+Epoch: 4
+ train_accuracy: 0.9994999766349792 train loss: 0.0036681899800896645
+  dev accuracy: 0.9750000238418579  dev loss: 0.03466564789414406
+Epoch: 5
+ train_accuracy: 0.9994999766349792 train loss: 0.0023300815373659134
+  dev accuracy: 0.9850000143051147  dev loss: 0.034430570900440216
+Epoch: 6
+ train_accuracy: 1.0 train loss: 0.0014313597930595279
+  dev accuracy: 0.9850000143051147  dev loss: 0.03797673434019089
+Epoch: 7
+ train_accuracy: 1.0 train loss: 0.0009267443674616516
+  dev accuracy: 0.9850000143051147  dev loss: 0.04262259975075722
+Epoch: 8
+ train_accuracy: 1.0 train loss: 0.0007127131102606654
+  dev accuracy: 0.9850000143051147  dev loss: 0.042381275445222855
+Epoch: 9
+ train_accuracy: 1.0 train loss: 0.0005882565747015178
+  dev accuracy: 0.9850000143051147  dev loss: 0.043234631419181824
+Epoch: 10
+ train_accuracy: 1.0 train loss: 0.0004887027316726744
+  dev accuracy: 0.9850000143051147  dev loss: 0.04376927390694618
+Epoch: 11
+ train_accuracy: 1.0 train loss: 0.00041689627687446773
+  dev accuracy: 0.9850000143051147  dev loss: 0.044614534825086594
+Epoch: 12
+ train_accuracy: 1.0 train loss: 0.000358407647581771
+  dev accuracy: 0.9850000143051147  dev loss: 0.0451166145503521
+Epoch: 13
+ train_accuracy: 1.0 train loss: 0.0003124598297290504
+  dev accuracy: 0.9850000143051147  dev loss: 0.0458306185901165
+Test set accuracy:  tensor(0.9950)

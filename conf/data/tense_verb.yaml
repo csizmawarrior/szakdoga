@@ -1,0 +1,5 @@
+# @package _group_
+path: "~/szakdoga/conf/data/tense_verb"
+train: "train.tsv"
+dev: "dev.tsv"
+test: "test.tsv"

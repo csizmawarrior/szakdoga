@@ -1,0 +1,45 @@
+~/szakdoga/conf/data/case_noun
+tensor(0.0648)
+Epoch: 0
+ train_accuracy: 0.9598214030265808 train loss: 0.8422884941101074
+  dev accuracy: 0.9675925970077515  dev loss: 0.8661723136901855
+Epoch: 1
+ train_accuracy: 0.9866071343421936 train loss: 0.19659137725830078
+  dev accuracy: 0.9814814925193787  dev loss: 0.22563005983829498
+Epoch: 2
+ train_accuracy: 0.9890872836112976 train loss: 0.09173180162906647
+  dev accuracy: 0.9814814925193787  dev loss: 0.13400019705295563
+Epoch: 3
+ train_accuracy: 0.9955357313156128 train loss: 0.05523310974240303
+  dev accuracy: 0.9768518805503845  dev loss: 0.11323179304599762
+Epoch: 4
+ train_accuracy: 0.9990079402923584 train loss: 0.03662514314055443
+  dev accuracy: 0.9768518805503845  dev loss: 0.10785984992980957
+Epoch: 5
+ train_accuracy: 0.9990079402923584 train loss: 0.025823131203651428
+  dev accuracy: 0.9768518805503845  dev loss: 0.10751347243785858
+Epoch: 6
+ train_accuracy: 0.9995039701461792 train loss: 0.019214048981666565
+  dev accuracy: 0.9768518805503845  dev loss: 0.10834793746471405
+Epoch: 7
+ train_accuracy: 0.9995039701461792 train loss: 0.014833984896540642
+  dev accuracy: 0.9768518805503845  dev loss: 0.10834155231714249
+Epoch: 8
+ train_accuracy: 1.0 train loss: 0.011730904690921307
+  dev accuracy: 0.9768518805503845  dev loss: 0.10828855633735657
+Epoch: 9
+ train_accuracy: 1.0 train loss: 0.009441365487873554
+  dev accuracy: 0.9768518805503845  dev loss: 0.10836721956729889
+Epoch: 10
+ train_accuracy: 1.0 train loss: 0.007736034691333771
+  dev accuracy: 0.9768518805503845  dev loss: 0.10921667516231537
+Epoch: 11
+ train_accuracy: 1.0 train loss: 0.006442921236157417
+  dev accuracy: 0.9768518805503845  dev loss: 0.10986777395009995
+Epoch: 12
+ train_accuracy: 1.0 train loss: 0.005446889903396368
+  dev accuracy: 0.9768518805503845  dev loss: 0.11087576299905777
+Epoch: 13
+ train_accuracy: 1.0 train loss: 0.004668800625950098
+  dev accuracy: 0.9768518805503845  dev loss: 0.11179219186306
+Test set accuracy:  tensor(0.9769)

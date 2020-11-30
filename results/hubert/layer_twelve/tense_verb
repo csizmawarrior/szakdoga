@@ -1,0 +1,21 @@
+~/szakdoga/conf/data/tense_verb
+tensor(0.4900)
+Epoch: 0
+ train_accuracy: 0.9785000085830688 train loss: 0.08100941777229309
+  dev accuracy: 0.9649999737739563  dev loss: 0.0848412960767746
+Epoch: 1
+ train_accuracy: 0.9860000014305115 train loss: 0.052330195903778076
+  dev accuracy: 0.9649999737739563  dev loss: 0.0905318483710289
+Epoch: 2
+ train_accuracy: 0.9925000071525574 train loss: 0.034129250794649124
+  dev accuracy: 0.9700000286102295  dev loss: 0.10213330388069153
+Epoch: 3
+ train_accuracy: 0.9959999918937683 train loss: 0.022890126332640648
+  dev accuracy: 0.9700000286102295  dev loss: 0.11181748658418655
+Epoch: 4
+ train_accuracy: 0.9980000257492065 train loss: 0.01562335155904293
+  dev accuracy: 0.9700000286102295  dev loss: 0.12389042228460312
+Epoch: 5
+ train_accuracy: 0.9990000128746033 train loss: 0.0111816031858325
+  dev accuracy: 0.9700000286102295  dev loss: 0.134238600730896
+Test set accuracy:  tensor(0.9800)
