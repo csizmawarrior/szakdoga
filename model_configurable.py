@@ -99,7 +99,7 @@ class BatchIterator_model:
 
 @hydra.main(config_path="conf")
 def model_configurable(cfg: DictConfig) -> None:
-    print(cfg.data.path)
+#   print(cfg.data.path)
     tokenizer = AutoTokenizer.from_pretrained(cfg.model.tokenizer_name)
     model = AutoModel.from_pretrained(cfg.model.model_name)
 
@@ -222,6 +222,7 @@ def model_configurable(cfg: DictConfig) -> None:
 
     labels = tokenized_dev_data["type"].unique()
 
+    print(labels)
     text_dev_y = tokenized_dev_data["type"]
 
     text_train_y = tokenized_train_data["type"]
@@ -280,7 +281,7 @@ def model_configurable(cfg: DictConfig) -> None:
 #First accuracy
     dev_pred = model_classifier(dev_x).max(axis=1)[1]
     dev_acc = torch.eq(dev_pred, dev_y).sum().float() / len(dev_x)
-    print(dev_acc)
+#    print(dev_acc)
 
 
 #training loop
@@ -321,8 +322,8 @@ def model_configurable(cfg: DictConfig) -> None:
         dev_acc = torch.eq(dev_pred, dev_y).sum().float() / len(dev_x)
         all_dev_acc.append(dev_acc)
 
-        print(f"Epoch: {epoch}\n train_accuracy: {train_acc} train loss: {train_loss}")
-        print(f"  dev accuracy: {dev_acc}  dev loss: {dev_loss}")
+#        print(f"Epoch: {epoch}\n train_accuracy: {train_acc} train loss: {train_loss}")
+#        print(f"  dev accuracy: {dev_acc}  dev loss: {dev_loss}")
 
         if(dev_loss >= previous_dev_loss):
             patiance= patiance-1
@@ -402,7 +403,8 @@ def model_configurable(cfg: DictConfig) -> None:
 
     test_pred = model_classifier(test_x).max(axis=1)[1]
     test_acc = torch.eq(test_pred, test_y).sum().float() / len(test_x)
-    print("Test set accuracy: ", test_acc)
+#    print("Test set accuracy: ", test_acc)
+    print(test_pred)
 
 #def functions that are needed
 
