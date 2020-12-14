@@ -36,14 +36,13 @@
 * In every BERT model's folder the results with dev and test accuracies are sorted, by the used hidden layer of the BERT, into subfolders.
 * The layer subfolders contain a file with every data groups' results in them, with dev and test accuracies.
 
-## The csv, xlsx and pptm files
+## The csv and pptm files
 
 * These files were used to get a bigger picture of the collected datas. They were created by collecting out every test accuracy from the result files in every subfolder of the results folder.
 * The ones that have latex in their names were used in the thesis itself, as tables.
-* The charts.xlsx contains the charts that were used in the thesis, and were made by the results of categorization of the faults of each BERT model. It is a not well distributed file, since it was only needed for creating the charts.
 * In the pptm file i created figures for the thesis, to represent some parts of it.
 
 ## The PNG files and the pdf file
 
 * The PNG files were used for the thesis to make it more readable and easier to imagine some parts in it. The pdf contained the graphs created by the plotting jupyter notebook, and the graph PNGs used this file as source.
-* Some PNG files used the charts.xlsx file for source, others used the pptm, others used outer sources, mentioned in the thesis.
+* Some PNG files used the pptm file for source, others used outer sources, mentioned in the thesis.
