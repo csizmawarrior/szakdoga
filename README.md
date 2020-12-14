@@ -2,7 +2,7 @@
 
 ## The reason
 
-* This repository is containing files that were used to work on the project of measuring different BERT models by probing, in order to find differences, and decide which model is the better than the other, and why.
+* This repository is containing files that were used to work on the project of measuring different BERT models by probing, in order to find differences, and decide which model is the better than the other, and why. The thesis was written in hungarian so some files have hungarian names
 
 ## The Jupyter notebooks and the sln file's connection
 
