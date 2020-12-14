@@ -26,7 +26,7 @@
 
 ## The scripts
 
-There are two script files now, script_try and script_try_half, these are looking for a model as a parameter, and they will iterate through all data groups and all layers, and save the results into the given folders for more evaluating. They are made very simply, one iterates through the first 7 layers, the other uses the last 6.
+* There are two script files now, script_try and script_try_half, these are looking for a model as a parameter, and they will iterate through all data groups and all layers, and save the results into the given folders for more evaluating. They are made very simply, one iterates through the first 7 layers, the other uses the last 6.
 
 ## The resultss directory
 
@@ -44,4 +44,4 @@ There are two script files now, script_try and script_try_half, these are lookin
 
 ## The PNG files and the pdf file
 
-The PNG files were used for the thesis to make it more readable and easier to imagine some parts in it. The pdf contained the graphs created by the plotting jupyter notebook, and the graph PNGs used this file as source.
+* The PNG files were used for the thesis to make it more readable and easier to imagine some parts in it. The pdf contained the graphs created by the plotting jupyter notebook, and the graph PNGs used this file as source.
