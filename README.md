@@ -74,3 +74,22 @@ other | 1 | 14
 ![](person_psor_fail.PNG)
 
 ![](mood_verb_fail.PNG)
+
+## Failure examples for some categories
+
+* From person_psor_noun:
+
+failure type | guessed type | type | word | sentence
+---------- | ---------- | ---------- | ---------- | ----------
+false data | 2 | 1 | munkát | Tovabbi jó foldmunkat !
+close context is another type | 2 | 1 | referenciaanyagunkba | A www.giveinformbt.hu honlapunkon betekintést nyerhet referenciaanyagunkba .
+another piece of the sentence is another type | 2 | 1 | társadalmunknak | Az öntudat már motoszkál benned , de remélhetőleg idővel egy kicsit megnyugszol és hasznos tagja leszel kis magyar társadalmunknak .
+
+* From mood_verb:
+
+failure type | guessed type | type | word | sentence
+---------- | ---------- | ---------- | ---------- | ----------
+default Ind | Ind | Pot | rajzolhatunk | Egy közkedvelt őszi DIY párnahuzat ötlet , melyet a gyerekekkel közösen is rajzolhatunk .
+false data | Ind | Imp | köszönöm/köszönjük | A segítségeteket előre is nagyon köszönöm/köszönjük !
+context is another mood | Pot | Imp | hazamehetett. | Még sokminden vár rá , de ma legalább hazamehetett. :)
+a word can be more than one type | Ind | Imp | újragondolják | A szociális ügyek megoldásának felelősségét a lakosság tradicionálisan a kormányok , egyház , illetve a családok ügyének tekintette , azonban a gazdasági válság sokakat arra kényszerített , hogy újragondolják ezt a nézetet .
