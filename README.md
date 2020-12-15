@@ -58,3 +58,19 @@ false data | 4 | 3 | 3
 another piece of the sentence is another type | 7 | 1 | 3
 close context is another type | 4 | 4 | 8
 other | 8 | 0 | 9
+
+mood_verb fail types | XLM-RoBERTa | BERT multilingual
+---------- | ---------- | ----------
+default In choosing | 6 | 6
+a word can be more types at once | 3 | 3
+other piece of sentence is another type | 1 | 0
+close context's mood | 2 | 4
+lack of helpiful words in context | 1 | 1
+false data | 3 | 4
+other | 1 | 14
+
+* I created charts of these results, that were used in the thesis too
+
+![](person_psor_fail.PNG)
+
+![](mood_verb_fail.PNG)
