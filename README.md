@@ -46,3 +46,15 @@
 
 * The PNG files were used for the thesis to make it more readable and easier to imagine some parts in it. The pdf contained the graphs created by the plotting jupyter notebook, and the graph PNGs used this file as source.
 * Some PNG files used the pptm file for source, others used outer sources, mentioned in the thesis.
+
+## The fail categorizing
+
+* I categorized the failures of all 3 BERT models on person_psor_noun data group, and categorized failures of XLM-RoBERTa and BERT multilingual on mood_verb data group. The statistics of the categorizing:
+
+person_psor_noun fail types | XLM-RoBERTa | HuBERT | BERT multilingual
+---------- | ---------- | ---------- | ----------
+foreign word | 1 | 0 | 1
+false data | 4 | 3 | 3
+another piece of the sentence is another type | 7 | 1 | 3
+close context is another type | 4 | 4 | 8
+other | 8 | 0 | 9
