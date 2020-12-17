@@ -2,7 +2,7 @@
 
 ## The Beginning
 
-This repository is containing files and programs that were used to work on the project of measuring different BERT models by probing, in order to find differences, and decide which model is the better than the other, and why. The thesis was written in hungarian so some files have hungarian names. One can run tests on any BERT model that is contained in the transformers library's AutoModel and its tokenizer in the AutoTokenizer. 
+This repository is containing files and programs that were used to work on the project of measuring different BERT models by probing, in order to find differences, and decide which model is the better than the other, and why. The project was done in hungarian so some files have hungarian names. One can run tests on any BERT model that is contained in the transformers library's AutoModel and its tokenizer in the AutoTokenizer. 
 
 The program takes a data group (that is also configurable), they contain test.tsv, train.tsv and dev.tsv files. These files contain the sentences that are the test cases for the neural networks, the target word, its position in the sentence and the class of the target word.
 
