@@ -6,7 +6,7 @@ It is mainly based on transformers library by huggingface and uses Python3 in th
 
 The paper about the model is in the repository in hungarian. Named: `szakdolgozat.pdf`
 
-## Quickstart
+## Quick start and running
 
 Requirements: hydra, Python 3, transformers and pytorch
 
