@@ -3,35 +3,35 @@
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=6 > ./results/$1/layer_six/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=6 +measure_type=accuracy > ./results/$1/layer_six/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=5 > ./results/$1/layer_five/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=5 +measure_type=accuracy > ./results/$1/layer_five/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=4 > ./results/$1/layer_four/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=4 +measure_type=accuracy > ./results/$1/layer_four/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=3 > ./results/$1/layer_three/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=3 +measure_type=accuracy > ./results/$1/layer_three/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=2 > ./results/$1/layer_two/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=2 +measure_type=accuracy > ./results/$1/layer_two/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=1 > ./results/$1/layer_one/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=1 +measure_type=accuracy > ./results/$1/layer_one/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=0 > ./results/$1/embedding/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=0 +measure_type=accuracy > ./results/$1/embedding/$i
 done

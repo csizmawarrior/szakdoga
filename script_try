@@ -3,30 +3,30 @@
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=7 > ./results/$1/layer_seven/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=7 +measure_type=accuracy > ./results/$1/layer_seven/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=8 > ./results/$1/layer_eight/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=8 +measure_type=accuracy > ./results/$1/layer_eight/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=9 > ./results/$1/layer_nine/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=9 +measure_type=accuracy > ./results/$1/layer_nine/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=10 > ./results/$1/layer_ten/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=10 +measure_type=accuracy > ./results/$1/layer_ten/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=11 > ./results/$1/layer_eleven/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=11 +measure_type=accuracy > ./results/$1/layer_eleven/$i
 done
 
 for i in "case_noun" "degree_adj" "mood_verb" "number_adj" "number_noun" "number_psor_noun" "number_verb" "person_psor_noun" "person_verb" "tense_verb" "verbform_verb"
 do
-    python3 model_configurable.py +data=$i +model=$1 +layer=12 > ./results/$1/layer_twelve/$i
+    python3 model_configurable.py +data=$i +model=$1 +layer=12 +measure_type=accuracy > ./results/$1/layer_twelve/$i
 done
