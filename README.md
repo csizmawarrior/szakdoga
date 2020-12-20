@@ -21,6 +21,8 @@ To run on a given model every layer with every now existing data group:
 `./script_try_first_half <model-name>
 ./script_try <model-name>`
 
+These scripts will save every data into the results folder and into its given subfolder, distributed by model and layer.
+
 ## Extraction
 
 To extract the programs with new BERT models or data groups, you should create new `.yaml` files.
