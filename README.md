@@ -40,6 +40,8 @@ This can be done by changing the `measure_type` in the configuration to `predict
 
 The correct results are found in the given `test.tsv` files under `conf/data/<data-group-name>` to compare it with the predicted ones. After you collected and compared them you can find categories among them, sort the failures into specific types. In my work i did it manually.
 
+## My measured results
+
 I could categorize the failures of all 3 BERT models on person_psor_noun data group, and categorized failures of XLM-RoBERTa and BERT multilingual BERT models on person_psor_noun data group. Here are the results:
 
 person_psor_noun fail types | XLM-RoBERTa | HuBERT | BERT multilingual
