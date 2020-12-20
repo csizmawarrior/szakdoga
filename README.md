@@ -72,7 +72,7 @@ other | 1 | 14
 
 failure type | guessed type | type | word | sentence
 ---------- | ---------- | ---------- | ---------- | ----------
-false data | 2 | 1 | munkát | Tovabbi jó foldmunkat !
+false data | 2 | 1 | munkát | Tovabbi jó földmunkát !
 close context is another type | 2 | 1 | referenciaanyagunkba | A www.giveinformbt.hu honlapunkon betekintést nyerhet referenciaanyagunkba .
 another piece of the sentence is another type | 2 | 1 | társadalmunknak | Az öntudat már motoszkál benned , de remélhetőleg idővel egy kicsit megnyugszol és hasznos tagja leszel kis magyar társadalmunknak .
 
